@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { SECRET } from "./config/env";
 import notFound from "./middlewares/notFound";
+import { router } from "./routes";
 
 
 const app: Application = express();
@@ -23,7 +24,7 @@ app.use(cors({
 app.get("/", (req: Request, res: Response) => {
     res.status(200).json({
         status: "success",
-        message: "🩸Wellcome To RoktoShare Server.🩸",
+        message: "Wellcome To RoktoShare Server.🩸",
         environment: SECRET.NODE_ENV,
         uptime: process.uptime().toFixed(2) + " sec",
         timeStamp: new Date().toISOString()
@@ -31,8 +32,9 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 
-// APPLICATON ROUTES MIDDLEWARES
-// app.use("/api/v1",)
+// APPLICATION ROUTE MIDDLEWARE
+app.use("/api/v1", router);
+
 
 
 // NOT FOUND ROUTE

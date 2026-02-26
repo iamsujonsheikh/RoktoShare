@@ -12,7 +12,7 @@ const startServer = async () => {
     try {
         await connectDB();
         server = app.listen(SECRET.PORT, () => {
-            console.log(`➡️ Server is running on http://localhost:${SECRET.PORT}`)
+            console.log(`➡️  Server is running on http://localhost:${SECRET.PORT}`)
         });
 
         setServer(server);

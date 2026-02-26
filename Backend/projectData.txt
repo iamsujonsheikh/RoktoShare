@@ -1,0 +1,67 @@
+### 6. Data **Requirements**
+
+6.1 **Rgister**
+- name
+- email
+- phone
+- password
+- role (donor/recipient/admin)
+
+6.2 **Login**
+- email / phone
+- password
+
+6.3 **Donor Profile Full Data**
+- name
+- email
+- phone
+- password
+- role (donor/recipient)
+- bloodGroup
+- district
+- dateOfBirth
+- gender
+- availability (true/false)
+- occupation (optional)
+- profilePhoto
+- lastDonationDate
+- cooldownEndDate
+- eligibilityStatus (true/false)
+- donationCount
+- weightEligible (true/false)  —  ☑️ I confirm my weight is at least 50kg
+- isVerified (true/false)
+- isDeleted (true/false)
+- status (active/ban/suspand)
+
+6.4 **Recipient Profile Full Data**
+- name
+- email
+- phone
+- password
+- role (donor/recipient)
+- district
+- dateOfBirth (optional)
+- gender
+- profilePhoto
+- totalRequestCount
+- isVerified (true/false)
+- status (active/ban/suspand)
+
+6.5 **Blood Request Data - Recipient**
+- requestId
+- recipientId
+- bloodGroup
+- description
+- urgencyLevel (Emergency / Scheduled)
+- **district**
+- expiresAt
+- requestStatus (pending/accepted/fulfilled/expired/canceled)
+- **contactVisibility** (phone/email)
+- emergencyBadge (true/false)
+
+6.6 **Donation**
+- donationId
+- donorId
+- requestId
+- donatedAt
+- verifiedBy (system/admin)
